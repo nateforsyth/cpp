@@ -10,7 +10,7 @@ namespace DelegatesAndEventsDemo
     // implements event handler to notify of changes to the object structure
     public class Person
     {
-        public event ValueChangeDelegate<ValueChangedEventArgs> ValueDelegate;
+        public event ValueChangedEventHandler<ValueChangedEventArgs> ValueChanged;
 
         private string firstName;
         private string lastName;
@@ -31,12 +31,12 @@ namespace DelegatesAndEventsDemo
                     var oldValue = firstName;
                     firstName = value;
 
-                    if (ValueDelegate != null)
+                    if (ValueChanged != null)
                     {
                         ValueChangedEventArgs args = new ValueChangedEventArgs();
                         args.OldValue = oldValue;
                         args.NewValue = firstName;
-                        ValueDelegate(this, args);
+                        ValueChanged(this, args);
                     }
                 }
             }
@@ -52,12 +52,12 @@ namespace DelegatesAndEventsDemo
                     var oldValue = lastName;
                     lastName = value;
 
-                    if (ValueDelegate != null)
+                    if (ValueChanged != null)
                     {
                         ValueChangedEventArgs args = new ValueChangedEventArgs();
                         args.OldValue = oldValue;
                         args.NewValue = lastName;
-                        ValueDelegate(this, args);
+                        ValueChanged(this, args);
                     }
                 }
             }
@@ -73,12 +73,12 @@ namespace DelegatesAndEventsDemo
                     var oldValue = age;
                     age = value;
 
-                    if (ValueDelegate != null)
+                    if (ValueChanged != null)
                     {
                         ValueChangedEventArgs args = new ValueChangedEventArgs();
                         args.OldValue = oldValue;
                         args.NewValue = age;
-                        ValueDelegate(this, args);
+                        ValueChanged(this, args);
                     }
                 }
             }

@@ -17,7 +17,7 @@ namespace DelegatesAndEventsDemo
             Person p = new Person() { FirstName = "Nathan", LastName = "Forsyth", Age = 100 };
             Console.WriteLine(p.ToString() + "\r\n");
 
-            p.ValueDelegate += p_ValueDelegate; // program is now subscribed to the value change event handler
+            p.ValueChanged += p_ValueDelegate; // program is now subscribed to the value change event handler
 
             p.FirstName = "John";
             p.LastName = "Wang";
