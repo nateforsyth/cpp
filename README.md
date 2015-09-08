@@ -1,4 +1,6 @@
 # cpp
+
+[![Join the chat at https://gitter.im/nateforsyth/cpp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nateforsyth/cpp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A public repo for CPP students to collaborate
 
 This project is written in Visual Studio 2015 RC using C#
